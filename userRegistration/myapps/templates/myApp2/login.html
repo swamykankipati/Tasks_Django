@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Raja's...">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registraion Form</title>
+	<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}"> -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<!-- <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"> -->
+
+	</script>
+	<style type="text/css">
+		label{
+			color: blue;
+
+		}
+		input[type=submit],button,a{
+	background: #EB3B88;
+	border: 1px solid #C94A81;
+	padding: 5px 15px 5px 15px;
+	color: #FFCBE2;
+	box-shadow: inset -1px -1px 3px #FF62A7;
+}
+.required{
+	color:red;
+	font-weight:normal;
+}input[type=text],input[type=password]{
+	border-radius: 3px;
+	border: 1px solid #FFC2DC;
+	outline: none;
+	color: #F072A9;
+	padding: 5px 8px 5px 8px;
+	box-shadow: inset 1px 1px 4px #FFD5E7;
+	background: #FFEFF6;
+	width:50%;
+	}
+	</style>
+
+
+
+</head>
+<body>
+	<h1>Login Page</h1>
+	<div class="main">
+		<form>
+		<h1>Login Page</h1>
+		<form action="{% url 'login' %}" method="POST">
+			{% csrf_token %}
+			<div class="inputs">
+				<label for="">User Name : </label>
+				<input class="input" type="text" name="uname" placeholder="Enter User Name" required><br><br>
+			</div>
+			<div class="inputs">
+				<label for="">Password : </label>
+				<input class="input" type="password" name="pwd" placeholder="Enter Password" required><br><br>
+			</div>
+			<div class="footr">
+				<input class="buttonsty" type="submit" name="submit" value="Login">
+				<button class="buttonsty"><a href="{% url 'register' %}">SingUp</a></button>
+
+			</div>
+
+		</form>
+	</div>
+</body>
+</html>

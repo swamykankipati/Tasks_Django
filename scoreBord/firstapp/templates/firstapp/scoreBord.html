@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> ::Score:: </title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel='stylesheet' type="text/stylesheet" href="{% static 'css/styles.css' %}">
+		<script type='text/javascript' src="{% static 'js/main.js'%}"></script>
+		<style>
+			input[type=text]{
+				 border: 2px solid red;
+                 border-radius: 25px;
+			}
+			input[type=submit]{
+				border: 2px solid blue;
+                 border-radius: 25px;
+                 width: 5%;
+
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="main">
+				<h1> Score Bord </h1>
+			<form class="formsection" action="{% url 'scoreBord' %}" method='POST'>
+				{% csrf_token %}
+				<div class="main1">
+					{% if t1val is None %}
+					<label>Team1</label><br>
+					<input class="score" type='text' name='t1val' value='0' readonly=''>
+
+					{% else %}
+
+					<input class="score" type='text' name='t1val'  value='{{ t1val }}' readonly=''>
+					{% endif %}
+					<input class="button" type='submit' name='team1' value="Team1">
+				</div>
+				<div class="main1">
+					{% if t2val is None %}
+					<label>Team2</label><br>
+					<input class="score" type='text' name='t2val' value='0' readonly=''>
+
+					{% else %}
+					<input class="score" type='text' name='t2val'  value='{{ t2val }}' readonly=''>
+					{% endif %}
+					<input class="button" type='submit' name='team2' value="Team2">
+				</div>
+			</form>
+		</div>
+
+	</body>
+</html>

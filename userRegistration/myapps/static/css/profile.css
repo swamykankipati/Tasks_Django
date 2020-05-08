@@ -1,0 +1,38 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 8px 8px 8px 8px #ddd;
+  padding: 1%;
+  margin: 1%;
+  width: 53%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid #000fff;
+}
+.child1 {
+  width: 38%;
+}
+.child2 {
+  width: 53%;
+}
+.child1, .child2 {
+  box-shadow: 8px 8px 8px 8px #ddd;
+  border-radius: 13px 1px 13px 1px;
+  border: 1px solid #000fff;
+  padding: 1%;
+  margin: 1%;
+}
+img {
+  width: 98%;
+  border-radius: 13px 1px 13px 1px;
+}
+h1 {
+  text-align: center;
+  color: #000fff;
+  margin-top: 0;
+}
+h5,h3 {
+  margin: 0;
+
+}

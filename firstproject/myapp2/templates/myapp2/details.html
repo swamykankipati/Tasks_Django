@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Details page</title>
+</head>
+<body>
+	<table border='1'>
+		{% for row in data%}
+			<tr>
+				<td>{{row.stuid}}</td>
+				<td><a href="#">{{row.stuName}}</a></td>
+				<td>{{row.branch}}</td>
+				<td>{{row.age}}</td>
+			</tr>
+
+		{% endfor%}
+	</table>
+</body>
+</html>

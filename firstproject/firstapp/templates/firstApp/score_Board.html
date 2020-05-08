@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SCORE_BOARD</title>
+</head>
+	<body>
+	<form action ="{% url 'scoreBoard' %}" method = 'POST'>
+		{% csrf_token %}
+		<h2>Team1</h2>
+		<button onclick ='add()'>Click</button>
+		<h2>Team2</h2>
+		<button onclick ='adding()'>Click</button>
+	</form>
+</body>
+		<c id='c'>0</c>
+		<script>
+			function add()
+			{
+				var score = document.getElementById('c').textContent
+				score++
+				document.getElementById('c').innerHTML = score
+			}
+		</script>
+		<c id='p'>0</c>
+		<script>
+			function adding()
+			{
+				var score = document.getElementById('p').textContent
+				score++
+				document.getElementById('p').innerHTML = score
+			}
+		</script>
+
+</html> 

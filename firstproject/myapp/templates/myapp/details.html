@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Details Page</title>
+</head>
+<body>
+	<div class="container">
+		<form action="{% url 'register' %} method="POST">
+			{% csrf_token %}
+	{% for row in data %}
+	<tr>
+		<td>{{ row.stdid}}</td>
+		<td>{{ row.stdName}}</td>
+		<td>{{ row.branch}}</td>
+		<td>{{ row.age}}</td>
+	</tr>
+	{% endrow %}
+</body>
+</html>

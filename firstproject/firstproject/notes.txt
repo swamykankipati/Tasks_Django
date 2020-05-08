@@ -1,0 +1,44 @@
+python manage.py shell
+
+from firstapp.models import Emp
+
+obj = Emp(first_name = 'Merc', last_name = 'polamarasetty', age='23')
+
+obj.save()
+
+Emp.objects.create(first_name = 'bhanu',last_name='kalla',age='25')
+
+data = Emp.objects.all()
+
+ for row in data:
+...     print(row.first_name)
+
+data = Emp.objects.values('first_name','last_name')
+
+data = Emp.objects.values('first_name','last_name','age')
+
+data = Emp.objects.values_list()
+
+INFO = Emp.objects.get(id=1)
+
+INFO = Emp.objects.filter(first_name='Merc')
+
+INFO = Emp.objects.get(first_name='Merc',last_name='polamarasetty')
+
+info=Emp.objects.first()
+
+info=Emp.objects.last()
+
+info=Emp.objects.all()
+
+info=Emp.objects.all()[:3]
+
+info=Emp.objects.order_by('first_name')
+
+info=Emp.objects.all()[::-1][:2]
+
+info = Emp.objects.all().update(age='25')
+
+info = Emd.objects.all.delete()
+
+info = Emp.objects.all().delete()

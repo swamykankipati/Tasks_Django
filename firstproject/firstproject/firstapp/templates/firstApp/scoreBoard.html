@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SCORE BOARD</title>
+</head>
+<body>
+	<form action = "{% url 'scoreBoard' % }" method="POST" >
+	{% csrf_token %}
+	{% if t1 is None %}
+          <input type="text" name="t1" value="0" readonly>
+          {%else%}
+          <input type="text" name="t1" value="{{ t1 }}" readonly>
+          {% endif %}
+          <input type="submit" name="team1" value="team1">
+
+          {% if t2 is None %}
+          <input type="text" name="t2" value="0" readonly>
+          {%else%}
+          <input type="text" name="t2" value="{{ t2 }}" readonly>
+          {% endif %}
+          <input type="submit" name="team2" value="team2">
+</form>
+</body>
+</html>

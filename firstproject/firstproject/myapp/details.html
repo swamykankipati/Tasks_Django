@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Details Page</title>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>student Id</th>
+				<th>student Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for info in data %}
+	<tr>
+		<td>{{ row.stdid}}</td>
+		<td>{{ row.stdName}}</td>
+		<td>{{ row.branch}}</td>
+		<td>{{ row.age}}</td>
+	</tr>
+	{% endfor %}
+</tbody>
+	</table>
+</body>
+</html>

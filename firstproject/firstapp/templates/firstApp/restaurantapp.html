@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Restaurant Application</title>
+</head>
+<body>
+	<form action ="{% url 'restaurantapp' %}" method = 'POST'>
+		{% csrf_token %}
+		<h1>Welcome to My Restaurant</h1>
+		<h2>Please Enter Quantity</h2>
+		Biryani : <input type='int' name ='biryani'><br>
+		Butternaans : <input type= 'int' name = 'butternaans'><br>
+		
+		<button type = 'submit'>Submit</button>
+</body>
+
+</html>
